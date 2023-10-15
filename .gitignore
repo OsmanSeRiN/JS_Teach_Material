@@ -13,8 +13,7 @@ npm-debug.log
 .idea/
 
 # Derleme sonuçlarını (örneğin, JavaScript veya CSS dosyaları) yok say
-*.js
-*.css
+
 
 # Derleme sonuçları için harici kütüphane veya modülleri yok say
 lib/
