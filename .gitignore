@@ -1,0 +1,24 @@
+# .gitignore
+
+# Geçici dosyaları ve klasörleri yok say
+.DS_Store
+Thumbs.db
+
+# Node.js veya npm ile oluşturulan geçici dosyaları ve klasörleri yok say
+node_modules/
+npm-debug.log
+
+# Proje yapılandırma dosyalarını yok say (örneğin, IDE veya metin düzenleyici özgü dosyalar)
+.vscode/
+.idea/
+
+# Derleme sonuçlarını (örneğin, JavaScript veya CSS dosyaları) yok say
+*.js
+*.css
+
+# Derleme sonuçları için harici kütüphane veya modülleri yok say
+lib/
+
+# Eğer kullanıyorsanız, kendi dosya uzantılarınıza göre ek kurallar ekleyebilirsiniz
+# Örneğin, tüm .log dosyalarını yok saymak için:
+# *.log
