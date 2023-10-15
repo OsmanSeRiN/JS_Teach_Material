@@ -18,6 +18,4 @@ npm-debug.log
 # Derleme sonuçları için harici kütüphane veya modülleri yok say
 lib/
 
-# Eğer kullanıyorsanız, kendi dosya uzantılarınıza göre ek kurallar ekleyebilirsiniz
-# Örneğin, tüm .log dosyalarını yok saymak için:
-# *.log
+
