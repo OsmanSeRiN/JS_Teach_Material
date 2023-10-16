@@ -14,3 +14,5 @@ let  liObject = document.createElement("li");
 liObject.innerHTML = "new item";
 
 // Bir HTML Elementine Css Ekleme 
+let  htmlItem = document.querySelector("#helloWorld")
+htmlItem.classList.add("textRed")

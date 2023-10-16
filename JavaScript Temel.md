@@ -92,6 +92,9 @@ for(let i = 0 ; i<10; i++)
 ### Bir HTNL Elementine Class Ekleme ve Değiştirme 
 
 ```javascript
-
+// Bir HTML Elementine Css Ekleme 
+let  htmlItem = document.querySelector("#helloWorld")
+htmlItem.classList.add("textRed")//Tekli şekilde
+htmlItem.classList.add("textRed","textBlue")//Çoklu şekilde
 ```
 

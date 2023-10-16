@@ -11,6 +11,9 @@ npm-debug.log
 # Proje yapılandırma dosyalarını yok say (örneğin, IDE veya metin düzenleyici özgü dosyalar)
 .vscode/
 .idea/
+.pnc
+.jpg
+.jpeg
 
 # Derleme sonuçlarını (örneğin, JavaScript veya CSS dosyaları) yok say
 
