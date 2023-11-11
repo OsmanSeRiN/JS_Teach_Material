@@ -81,12 +81,8 @@ console.log("Bulunan İtem Değiştirildi");
 let ulObject = document.querySelector("lu#list");
 let  liObject = document.createElement("li");
 liObject.innerHTML = "new item";
-
-for(let i = 0 ; i<10; i++)
-{
-    ulObject.appendChild(liObject);
-    console.log(i);
-}
+ulObject.appendChild(liObject);
+Console.log(i);
 ```
 
 ### Bir HTNL Elementine Class Ekleme ve Değiştirme 
@@ -97,4 +93,83 @@ let  htmlItem = document.querySelector("#helloWorld")
 htmlItem.classList.add("textRed")//Tekli şekilde
 htmlItem.classList.add("textRed","textBlue")//Çoklu şekilde
 ```
+### Swich Case Yapısı
+Genellikle çok sayıda if-else ifadesinin kullanılmasını engellemek ve kodu daha okunabilir hale getirmek için tercih edilir.
+```javascript
+var gün = "Pazartesi";
 
+switch (gün) {
+  case "Pazartesi":
+    console.log("Yeni bir haftaya başladık!");
+    break;
+  case "Çarşamba":
+    console.log("Haftanın ortası geldi!");
+    break;
+  case "Cuma":
+    console.log("Hafta sonuna yaklaşıyoruz!");
+    break;
+  default:
+    console.log("Diğer günler");
+}
+```
+### Ternary Operatör
+```javascript
+var money = 40;
+var canBuy = 
+    (money < 17) ? "Satın alamazsın..":
+    (money > 30) ? "Satın alabilirsin..":
+    "Para miktarını girmen gerekmektedir..";
+
+console.log(canBuy) // "Satın alabilirsin.."
+```
+
+```javascript
+var sayı = 1
+info.innerHTML = `${sayı < 10 ? userName:"Başarılı oram"}`
+```
+
+### Fonksiyonlar
+
+```javascript
+function toplama (a , b) // a ve b toplanacak iki sayıyı temsil eden fonksiyon parametreleri(girdileri) {  
+    var sonuc = a+b; // Fonksiyonda aldığımız parametrelerle yaptığımız işlem
+	return sonuc;  	// Herhangi iki sayının toplamından elde edeceğimiz işlem sonucunu, return ifadesinden hemen sonra belirtiyoruz.
+ }      
+
+ toplama(1,2)
+```
+### Arrow Function
+
+```javascript
+var feedTheCat = (cat) => {
+    if (cat === 'hungry') {
+      return 'Feed the cat';
+    } else {
+      return 'Do not feed the cat';
+    }
+  }
+```
+### JavaScript İle Bir HTML öğesini Butona Bağlama
+
+```javascript
+let int = 0;
+let header = document.querySelector("#int");
+let btnUpper = document.querySelector("#upper");
+let btnlower = document.querySelector("#lower");
+
+header.innerHTML = int
+btnUpper.addEventListener("click",Upper)
+btnlower.addEventListener("click",Lower);
+
+function Upper() {
+    console.log(int)
+    int = int +5
+    header.innerHTML = int
+}
+
+function Lower()  {
+    int = int - 5
+    header.innerHTML = int
+    console.log(int)
+}
+```

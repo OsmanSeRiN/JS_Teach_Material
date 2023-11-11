@@ -14,5 +14,26 @@ let  liObject = document.createElement("li");
 liObject.innerHTML = "new item";
 
 // Bir HTML Elementine Css Ekleme 
-let  htmlItem = document.querySelector("#helloWorld")
-htmlItem.classList.add("textRed")
+let  htmlItem = document.querySelector("#helloWorld");
+htmlItem.classList.add("textRed");
+
+let int = 0;
+let header = document.querySelector("#int");
+let btnUpper = document.querySelector("#upper");
+let btnlower = document.querySelector("#lower");
+
+header.innerHTML = int
+btnUpper.addEventListener("click",Upper)
+btnlower.addEventListener("click",Lower);
+
+function Upper() {
+       console.log(int)
+    int = int +5
+    header.innerHTML = int
+}
+
+function Lower()  {
+    int = int - 5
+    header.innerHTML = int
+    console.log(int)
+}
