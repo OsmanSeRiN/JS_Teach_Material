@@ -14,3 +14,21 @@
     color: coral;
     text-align: center;
 }
+
+.btnSubmit{
+    color:white;
+    background-color: blueviolet;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.btnSubmit:hover{
+    color:black;
+    background-color: rgb(207, 180, 233);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    align-items: center;
+}
