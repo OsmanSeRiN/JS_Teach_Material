@@ -338,3 +338,56 @@ localStorage.setItem('kullaniciAdi', submitCode );
           </center>
         </form>
 ```
+
+### JavaScript Array'ler
+
+#### Oluşturma:
+```javascript
+let fruits = ['Elma', 'Muz', 'Üzüm', 'Portakal'];
+```
+
+#### Eleman Ekleme:
+
+```javascript
+fruits.push('Çilek');// Sona ekleme
+console.log(fruits); // ['Elma', 'Muz', 'Üzüm', 'Portakal', 'Çilek']
+
+fruits.UnShift('Çilek');
+console.log(fruits); // ['Elma', 'Muz', 'Üzüm', 'Portakal', 'Çilek']
+
+```
+#### Eleman kaldırma
+
+```javascript
+let lastFruit = fruits.pop(); // Sondan çıkartma
+console.log(lastFruit); // Çilek
+console.log(fruits); // ['Elma', 'Muz', 'Üzüm', 'Portakal']
+
+let lastFruit = fruits.shift();// Baştan çıkartma
+console.log(lastFruit); // Çilek
+console.log(fruits); // ['Elma', 'Muz', 'Üzüm', 'Portakal']
+
+```
+
+#### Dizi Elemanlarını Filtreleme
+
+```javascript
+let filteredFruits = fruits.filter(function(fruit) {
+  return fruit.length > 4;
+});
+
+console.log(filteredFruits); // ['Üzüm', 'Portakal']
+
+```
+
+#### Dizi Elemanlarını Düzenleme
+
+```javascript
+let uppercasedFruits = fruits.map(function(fruit) {
+  return fruit.toUpperCase();
+});
+
+console.log(uppercasedFruits); // ['ELMA', 'MUZ', 'ÜZÜM', 'PORTAKAL']
+
+```
+
