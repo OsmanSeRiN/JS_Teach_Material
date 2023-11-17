@@ -27,7 +27,7 @@ btnUpper.addEventListener("click",Upper)
 btnlower.addEventListener("click",Lower);
 
 function Upper() {
-       console.log(int)
+    console.log(int)
     int = int +5
     header.innerHTML = int
 }
@@ -36,4 +36,11 @@ function Lower()  {
     int = int - 5
     header.innerHTML = int
     console.log(int)
+}
+
+
+function deneme() {
+    var sayi = "5";
+    let kelime = "sana ne";
+    const passworld = 23123
 }

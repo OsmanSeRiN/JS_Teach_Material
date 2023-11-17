@@ -294,3 +294,47 @@ function formSubmit(event) {
           </center>
         </form>
 ```
+
+### Event İle Form Yenilemeyi Durdurma
+
+#### JavaScript
+```javascript
+let userForm = document.querySelector("#userForm");
+userForm.addEventListener('submit',formSubmit);
+
+function formSubmit(event) {
+    console.log("tamam");
+    event.preventDefault();//formun kendisini yenilemesini engeller
+    let submitCode = document.querySelector("#varCode");
+    console.log(submitCode.value)
+}
+localStorage.setItem('kullaniciAdi', submitCode );
+```
+
+#### HTML
+
+```html
+ <form  id="userForm" method="get">
+            <center>
+            <!---->
+            <div class="col-12 m-5 mx-auto">
+                <input class="col-9" type="number" id="varCode" name="txtNumber"> 
+            </div>
+             <!---->
+            <div class="row">
+                
+                <div class="col-3">
+                    <button type="submit" class="btn btn-close"></button>
+                </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-outline-primary">Adam
+                </div>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-outline-dark">Yürüyen Uçak</button>
+                </div>
+               
+             <!---->
+            </div> 
+          </center>
+        </form>
+```

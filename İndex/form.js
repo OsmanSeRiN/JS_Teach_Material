@@ -7,3 +7,4 @@ function formSubmit(event) {
     let submitCode = document.querySelector("#varCode");
     console.log(submitCode.value)
 }
+localStorage.setItem('kullaniciAdi', submitCode );

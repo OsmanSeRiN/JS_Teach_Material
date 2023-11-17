@@ -1,6 +1,6 @@
 let userName = prompt("Name");
 let helloUser = document.querySelector("#userName");
-let date = document.querySelector("#date")
+let date =document .querySelector("#date")
 
 helloUser.innerHTML = `Merhaba, ${userName} Hoşgeldin.`
 
@@ -28,7 +28,7 @@ function currentTime() {
   
     document.getElementById("date").innerText = time;
   
-    let t = setTimeout(function () {
+    let t= setTimeout(function () {
       currentTime();
     }, 1000);
   }
