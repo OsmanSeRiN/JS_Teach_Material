@@ -391,3 +391,99 @@ console.log(uppercasedFruits); // ['ELMA', 'MUZ', 'ÜZÜM', 'PORTAKAL']
 
 ```
 
+### Object
+
+#### Obje oluşturma
+
+```javascript
+let car = {		
+  brand: "BMW", 	// key(anahtar) "brand" "BMW" value(değerini) tutar 
+  year: 2020,  		// key(anahtar) "year" 2020 value(değerini) tutar 
+};
+```
+
+#### Obje Bilgisi Çağırma
+
+```javascript
+console.log(car.brand);
+```
+
+#### Objeye eleman ekleme
+
+```javascript
+car.brand = {"Audi"}
+```
+#### Value ve Keys
+
+```javascript
+Object.Value(car) // Tüm Value Değerlerini Çağırır
+Object.Keys(car) //Tüm Keys Değerlerini Çağırır
+```
+
+#### Obje elemanlarını tek seferde çağırma
+
+```javascript
+const foo = { a: 123, b: true }
+const {a,b} = foo;
+```
+
+### Hata Yönetimi
+
+```javascript
+try {
+  //Çalıştırılacak kodlar
+}catch(hata) {
+  //Hata yakalandığında çalışacak kodlar
+}finally {
+  //try tamamlandıktan sonra hata olsada olmasada çalışacak olan kodlar.
+}
+```
+
+### Fatch API
+
+Fetch API’ yi kullanmak için fetch metoduna istek yapacağımız url’ i parametre olarak vermek gerekiyor.
+
+```javascript
+fetch(url);
+```
+
+fetch() metodundan sonra, metodun sonuna then() promise metodunu ekleriz:
+
+```javascript
+.then(function() {
+})
+```
+ 
+" Https://jsonplaceholder.typicode.com/todos ” adresine get isteğinde bulunalım.
+
+```javascript
+//// GET İsteği
+fetch("https://jsonplaceholder.typicode.com/todos")
+	.then((response) => response.json()) //parse json data
+	.then(function (todos) {
+		todos.forEach((todo) => {
+			console.log(todo.title); //Başlıkları console' a yazdırma
+		});
+	});
+```
+
+POST İsteği
+
+```javascript
+ POST isteği ile verimizi servera gönderelim
+let payload = {
+    title: "Blog Title",
+    body: "lorem ipsum",
+    userId:1
+  }
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: "POST",
+    body: JSON.stringify(payload),
+    headers: {"Content-type": "application/json; charset=UTF-8"}
+  })
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(err => console.log(err));
+```
+
+
